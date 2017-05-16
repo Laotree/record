@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>操作记录检索</title>
+<link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+<style type="text/css">
+select.local {height:30px;width:110px;} 
+</style>
+</head>
+<body>
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<ul class="nav nav-tabs">
+				<li class="active">
+					 <a href="/">首页</a>
+				</li>
+				
+				<li>
+					 <a href="/examples">参数</a>
+				</li>
+				<li>
+					 <a href="/info">信息</a>
+				</li>
+			</ul>
+			
+			<div class="alert alert-dismissable alert-info">
+				 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+				<h4>
+					请注意：
+				</h4> 尽量填写更多连续的查询条件或者<strong>单个条件</strong>，让结果更准确和迅捷，如果您对参数不太理解，可以先参看一下 
+				 <a href="./example.html" class="alert-link">参数表</a>
+			</div>
+			
+<form id="frm" class="navbar-form form-search active" accept-charset="UTF-8" action="/" method="get">
+	 <div class="form-group">
+		<table border="0">		
+			<tr>
+				<td width="10%">时&nbsp&nbsp&nbsp间：</td>
+				<td width="15%">
+					<input class="form-control" type="text" name="date" placeholder="暂未使用" />
+				</td>
+				<td width="5%"></td>
+				<td width="10%">用户名：</td>
+				<td width="15%">
+					<input class="form-control" type="text" name="username"/>
+				</td>
+				<td width="5%"></td>
+				<td width="10%">操作模块：</td>
+				<td width="15%">
+					<input class="form-control" type="text" name="area"/>
+				</td>
+				<!--<td width="15%">
+					<select class="local" name="area">
+					<option value="补发回调">补发回调</option>
+					<option value="" selected="selected">其他</option>
+					</select>
+				</td>-->
+			</tr>
+			<tr>
+				<td width="10%">关联商户：</td>
+				<td width="15%">
+					<input class="form-control" type="text" name="cpname" />
+				</td>
+				<td width="5%"></td>
+				<td width="10%">关联应用：</td>
+				<td width="15%">
+					<input class="form-control" type="text" name="appname" />
+				</td>
+				<td width="5%"></td>
+				<td width="10%">操作项：</td>
+				<td width="15%">
+					<input class="form-control" type="text" name="stuff"/>
+				</td>				
+				<!--<td width="15%">
+					<select class="local" name="action">
+					<option value="发送">发送</option>
+					<option value="" selected="selected">其他</option>
+					</select>
+				</td>-->
+				<td width="10%">
+					<input type="button" onclick="sub();" value="查    询"/>
+				</td>
+	<!--<input class="form-control" name="search" type="text" value="" placeholder="搜索本站内容" />
+	
+	<input type="button" onclick="sub();" value="查    询"/>-->
+			</tr>
+		</table>
+	<br/>
+	<div class="clear"></div>
+	</div>
+			<table class="table">
+				<thead>
+					<tr>
+						<th width="20%">
+							时间
+						</th>
+						<th width="10%">
+							IP
+						</th>
+						<th width="10%">
+							用户名
+						</th>
+						<th width="10%">
+							操作模块
+						</th>
+						<th width="10%">
+							操作项
+						</th>
+						<th width="15%">
+							操作内容
+						</th>
+						<th width="10%">
+							关联商户
+						</th>
+						<th width="10%">
+							关联应用
+						</th>
+					</tr>
+				</thead>
+
+				<tbody bgcolor="#fafafa">
+					 
+					<each>
+					<% if (@resultList[0] != nil) %>
+					<% if (@resultList.size >= 20) %>
+					<% (@count = 19) %>
+					<% else %>
+					<% (@count = @resultList.size-1) %>
+					<% end %>
+					<% @items = Array(0..@count) %>
+					<% @items.each do |item| %>
+					<tr>
+						<td>
+							<%= @resultList[item][0]%>
+						</td>
+						<td>
+							<%= @resultList[item][1]%>
+						</td>
+						<td>
+							<%= @resultList[item][3]%>
+						</td>
+						<td>
+							<%= @resultList[item][6]%>
+						</td>
+						<td>
+							<%= @resultList[item][7]%>
+						</td>
+						<td>
+							<%= @resultList[item][8]%>
+						</td>
+						<td>
+							<%= @resultList[item][4]%>
+						</td>
+						<td>
+							<%= @resultList[item][5]%>
+						</td>
+					</tr>
+					
+					<% end %>					
+					<% end %>
+					</each>
+				</tbody>
+			</table>
+</div>
+</form>
+		</div>
+	</div>
+</div>
+</body>
+
+<script type="text/javascript">
+
+function sub(){	    		
+			
+		$('#frm').submit();
+	
+}
+
+
+    </script>            
+</html>
