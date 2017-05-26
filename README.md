@@ -2,12 +2,15 @@
 This rails app is sent to find record of some system behavior log
 
 * How to start:
-git clone git@github.com:Laotree/record.git
-cd bin
-rails server
-** you can see the website on localhost:3000
+git clone git@github.com:Laotree/record.git<br>
+cd bin<br>
+rails server<br>
+**you can see the website on localhost:3000**
 
 * Version:
-ruby 2.3.1
-Rails 5.0.0.1
+ruby 2.3.1<br>
+Rails 5.0.0.1<br>
 
+* Todo:
+- get the path setted on the website<br>
+- get the form of log setted on the website<br>
