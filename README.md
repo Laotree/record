@@ -1,17 +1,17 @@
 # RECORD
 This rails app is sent to find record of some system behavior log
 
-## How to start:<br>
+## How to start:
 
-git clone [link](git@github.com:Laotree/record.git)<br>
-cd bin<br>
-rails server<br>
+git clone
+cd bin
+rails server
 **you can see the website on [http://localhost:3000](localhost:3000)**
 
-## Version:<br>
-ruby 2.3.1<br>
-Rails 5.0.0.1<br>
+## Version:
+ruby 2.3.1
+Rails 5.0.0.1
 
-## Todo:<br>
-- get the path setted on the website<br>
-- get the form of log setted on the website<br>
+## Todo:
+- get the path setted on the website
+- get the form of log setted on the website
