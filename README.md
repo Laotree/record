@@ -1,24 +1,13 @@
-# README
+# RECORD
+This rails app is sent to find record of some system behavior log
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* How to start:
+git clone git@github.com:Laotree/record.git
+cd bin
+rails server
+** you can see the website on localhost:3000
 
-Things you may want to cover:
+* Version:
+ruby 2.3.1
+Rails 5.0.0.1
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
